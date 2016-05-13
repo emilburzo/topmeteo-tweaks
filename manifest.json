@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Tweaks for TopMeteo.eu",
+  "description": "Usability enhancements for topmeteo.eu",
+  "version": "2.1",
+  "content_scripts": [
+    {
+      "matches": ["http://topmeteo.*"],
+      "js": ["topmeteo.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
