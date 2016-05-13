@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "name": "Tweaks for TopMeteo.eu",
   "description": "Usability enhancements for topmeteo.eu",
-  "version": "2.1",
+  "version": "2.2",
   "content_scripts": [
     {
-      "matches": ["http://topmeteo.*"],
+      "matches": ["http://topmeteo.eu/*", "http://topmeteo.emilburzo.com/*"],
       "js": ["topmeteo.js"],
       "run_at": "document_end"
     }
