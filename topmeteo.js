@@ -2,10 +2,10 @@ var dg = "°";
 var list, index, element, filename;
 var template = "<img title=\'@ALT@\' src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAADFBMVEUAAAAAAABLS0v///8z/l1PAAAAAnRSTlMAAQGU/a4AAAAnSURBVHgBYwABJiYQSYDJCKRgokxgCoGhCCQDBBAWI5gNpKAmgBgADj8ATZcxOmoAAAAASUVORK5CYII=\" style='transform: rotate(@X@deg)'/>";
 
-list = document.getElementsByClassName('pvtv');
+list = document.getElementsByClassName('product-content');
 
 for (index = 0; index < list.length; index++) {
-    element = list[index].firstChild.firstChild;
+    element = list[index].firstElementChild;
 
     if (element.innerHTML != null && element.innerHTML.indexOf(dg) !== -1 && element.innerHTML.indexOf("C") == -1) {
         var idx = element.innerHTML.indexOf(dg);
@@ -14,4 +14,3 @@ for (index = 0; index < list.length; index++) {
         element.innerHTML = element.innerHTML.replace(degrees + dg, template.replace("@X@", degrees).replace("@ALT@", degrees + dg));
     }
 }
-
